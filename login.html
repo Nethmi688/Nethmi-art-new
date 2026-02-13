@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login / Sign In</title>
+  <link rel="stylesheet" href="login1c.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div class="left-inner">
+        <h2 class="brand">Welcome!</h2>
+
+        <div class="tabs">
+          <button class="tab active" id="loginTab">LOGIN</button>
+          <button class="tab" id="signInTab">SIGN IN</button>
+        </div>
+
+        <p class="left-text">
+          Please login or create a new account<br />
+          to continue your journey.
+        </p>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+
+      <!-- LOGIN FORM -->
+      <div class="form-wrapper" id="loginForm">
+        <div class="form-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h2>LOGIN</h2>
+        </div>
+
+        <form>
+          <div class="input-group">
+            <label>Email</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" placeholder="Enter your email" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="password" placeholder="Enter your password" />
+            </div>
+          </div>
+
+          <div class="options-row">
+            <a href="#" class="forgot">Forgot Password?</a>
+            <button type="button" class="btn-login" onclick="loginNow()">LOGIN</button>
+          </div>
+        </form>
+
+        <div class="divider"><span>Or Login with</span></div>
+
+        <div class="social-icons-only">
+          <div class="icon-circle-group">
+            <a href="https://www.facebook.com" target="_blank" class="icon-circle fb">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="icon-circle tw">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="icon-circle ig">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGN IN / REGISTER FORM -->
+      <div class="form-wrapper register-form" id="registerForm" style="display:none;">
+        <div class="form-header">
+          <div class="user-icon">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <h2>SIGN IN</h2>
+        </div>
+
+        <form>
+          <div class="input-group">
+            <label>Full Name</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="regName" placeholder="Enter your full name" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="regEmail" placeholder="Enter your email" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="regPass" placeholder="Create a password" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="regConfirm" placeholder="Confirm your password" />
+            </div>
+          </div>
+
+          <div class="options-row">
+            <span></span>
+            <button type="button" class="btn-login" onclick="registerNow()">SIGN IN</button>
+          </div>
+        </form>
+
+        <div class="divider"><span>Or Sign in with</span></div>
+
+        <div class="social-icons-only">
+          <div class="icon-circle-group">
+            <a href="https://www.facebook.com" target="_blank" class="icon-circle fb">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="icon-circle tw">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="icon-circle ig">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const loginTab = document.getElementById("loginTab");
+    const signInTab = document.getElementById("signInTab");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    // TAB SWITCHING
+    loginTab.onclick = () => {
+      loginTab.classList.add("active");
+      signInTab.classList.remove("active");
+      loginForm.style.display = "block";
+      registerForm.style.display = "none";
+    };
+
+    signInTab.onclick = () => {
+      signInTab.classList.add("active");
+      loginTab.classList.remove("active");
+      loginForm.style.display = "none";
+      registerForm.style.display = "block";
+    };
+
+    // LOGIN FUNCTION
+    function loginNow() {
+      const email = document.getElementById("email").value;
+      const pass = document.getElementById("password").value;
+
+      if (email === "" || pass === "") {
+        alert("Please enter email and password");
+        return;
+      }
+
+      // SUCCESS → GO TO MAIN PAGE
+      window.location.href = "index.html";
+    }
+
+    // REGISTER FUNCTION
+    function registerNow() {
+      const name = document.getElementById("regName").value;
+      const email = document.getElementById("regEmail").value;
+      const pass = document.getElementById("regPass").value;
+      const confirm = document.getElementById("regConfirm").value;
+
+      if (name === "" || email === "" || pass === "" || confirm === "") {
+        alert("Please fill all fields");
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email");
+        return;
+      }
+
+      if (pass !== confirm) {
+        alert("Passwords do not match");
+        return;
+      }
+
+      alert("Account Created Successfully!");
+
+      // SUCCESS → GO TO MAIN PAGE
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

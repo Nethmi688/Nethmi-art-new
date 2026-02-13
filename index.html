@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>From Pencil to Heart | Nethmi</title>
+  <meta name="description" content="Nethmi Kaushalya — Pencil Drawings, Portraits, Commissions & Prints" />
+  <meta name="author" content="Nethmi Kaushalya" />
+  <link rel="icon" href="WhatsApp Image 2025-08-21 at 01.26.36_fcf5571d.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="logo">NK</span>
+        <span>Nethmi Art</span>
+      </a>
+
+      <nav class="menu">
+        <a href="login.html">Login</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn alt" href="#shop">Buy Arts</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <span class="badge">🎨 Pencil Drawings • Portraits</span>
+        <h1>From Pencil to Heart</h1>
+
+        <div class="profile-section">
+          <img class="profile-pic" src="WhatsApp Image 2025-08-21 at 01.26.36_fcf5571d.jpg" alt="Nethmi Portrait">
+
+          <div class="profile-text">
+            <h1>Hi, I'm <span class="gradient-text">Nethmi</span> — I draw human portraits with care.</h1>
+            <p>My goal is to bring happiness to people's hearts through pencil art. You can buy prints, request commissions, and view my latest works.</p>
+          </div>
+        </div>
+
+        <div class="cta" style="margin-top: 20px;">
+          <a class="btn" id="openGallery">Explore Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY (Hidden by default) -->
+    <section id="gallery" class="section">
+      <h2>Gallery</h2>
+      <div class="grid" id="galleryGrid">
+
+        <article class="card">
+          <img src="art 2.jpg" alt="Dreamer's Gaze" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://payhip.com/"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="art 11.jpg" alt="Dreamer's Gaze 2" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://payhip.com/"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="art 7.jpg" alt="Silent Thoughts" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://gumroad.com/"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="art22.jpg" alt="Silent Thoughts 2" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://gumroad.com/"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="art 1.jpg" alt="Gentle Smile" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://your-shop-link.example"></button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="art21.jpg" alt="Gentle Smile 2" loading="lazy" />
+          <div class="meta">
+            <button class="buy" data-link="https://your-shop-link.example"></button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
+
+    <!-- SHOP -->
+    <section id="shop" class="section">
+      <h2>Print Shop</h2>
+
+      <div class="shop">
+
+        <div class="product">
+          <img src="art 16.jpg" alt="A4 Print"/>
+          <div class="body">
+            <h3>A4 Print </h3>
+            <p>210×297mm</p>
+            <div class="price-row">
+              <span class="price">2000円</span>
+              <a class="btn" href="https://payhip.com/" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="art19.jpg" alt="A3 Print" />
+          <div class="body">
+            <h3>A3 Print</h3>
+            <p>297×420mm </p>
+            <div class="price-row">
+              <span class="price">2500円</span>
+              <a class="btn" href="https://gumroad.com/" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="art17.jpg" alt="Canvas" />
+          <div class="body">
+            <h3>Canvas</h3>
+            <p>30×40cm</p>
+            <div class="price-row">
+              <span class="price">3000円</span>
+              <a class="btn" href="https://your-shop-link.example" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REQUEST FORM -->
+    <section id="commissions" class="section">
+      <h2>Request</h2>
+
+      <form action="https://formsubmit.co/nkaushalya688@gmail.com" method="POST">
+
+        <input type="hidden" name="_subject" value="New Art Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <select name="type" required>
+          <option value="">Type</option>
+          <option value="Portrait">Portrait</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="number" name="budget" placeholder="Budget" required>
+
+        <textarea name="details" placeholder="Details" rows="4"></textarea>
+
+        <button type="submit" class="btn">Send Request</button>
+        <button type="reset" class="btn cancel">Cancel</button>
+
+      </form>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <p>I'm <strong>Nethmi Kaushalya</strong>, a pencil artist in human portraits. I aim to brighten someone's day through pencil art.</p>
+
+      <ul>
+        <li>Focus: Portraits</li>
+        <li>Tools: Pencil, Sketchbook</li>
+        <li>Based in: Okayama, Japan</li>
+        <li>You’re welcome to explore my pencil drawings on this site—purchase a piece you love or request a custom portrait tailored to your preferences.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <div class="social">
+        <a href="mailto:nkaushalya688@gmail.com">
+          <img src="gmail icon.png" alt="Email" class="icon"> Email
+        </a>
+
+        <a href="https://instagram.com/" target="_blank">
+          <img src="instergram.jpeg" alt="Instagram" class="icon"> Instagram
+        </a>
+
+        <a href="https://facebook.com/" target="_blank">
+          <img src="facebook icon.jpeg" alt="Facebook" class="icon"> Facebook
+        </a>
+
+        <a href="https://wa.me/your-number" target="_blank">
+          <img src="whatsapp icon.jpeg" alt="WhatsApp" class="icon"> WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© <span id="year"></span> Nethmi Kaushalya — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- EXISTING SCRIPT -->
+  <script>
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const captionText = document.getElementById("caption");
+    const closeBtn = document.querySelector(".close");
+
+    const galleryImages = document.querySelectorAll("#galleryGrid img");
+    const shopImages = document.querySelectorAll(".shop img");
+
+    function openModal(img) {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerText = img.alt;
+    }
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => openModal(img));
+    });
+
+    shopImages.forEach(img => {
+      img.addEventListener("click", () => openModal(img));
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ⭐ NEW SCRIPT: SHOW GALLERY + SCROLL ⭐ -->
+  <script>
+    document.getElementById("openGallery").addEventListener("click", function () {
+      const gallery = document.getElementById("gallery");
+      gallery.style.display = "block";
+      gallery.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
